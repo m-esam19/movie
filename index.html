@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Start Side Nav -->
+     <nav class="position-fixed bg-white d-flex flex-column justify-content-between vh-100 text-black align-items-center py-4">
+        <img src="imgs/logo.png" class="w-50" alt="Movie App">
+        <div class="menu-btns fs-4">
+            <i id="openSideMenuBtn" class="fa-solid fa-bars"></i>
+            <i id="closeSideMenuBtn" class="fa-solid fa-xmark d-none"></i>
+        </div>
+        <div class="share d-flex flex-column">
+            <i class="fa-solid fa-globe mb-2"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+        </div>
+     </nav>
+     <div id="side-menu" class="side-menu pb-4 text-white d-flex flex-column justify-content-between position-fixed start-0 top-0 vh-100 bg-black z-3">
+        <ul class="list-unstyled main-links">
+            <li class="pt-4 animate__animated"><a href="" sec="now_playing" class="text-decoration-none p">Now Playing</a></li>
+            <li class="pt-4 animate__animated"><a href="" sec="popular" class="text-decoration-none p">Popular</a></li>
+            <li class="pt-4 animate__animated"><a href="" sec="top_rated" class="text-decoration-none p">Top Rated</a></li>
+            <li class="pt-4 animate__animated"><a href="" sec="trending" class="text-decoration-none p">Trending</a></li>
+            <li class="pt-4 animate__animated"><a href="" sec="upcoming" class="text-decoration-none p">Upcoming</a></li>
+            <li class="pt-4 animate__animated"><a href="#contactUs" class="text-decoration-none p">Contact Us</a></li>
+        </ul>
+        <div class="copyright">
+            <div class="social-icons mb-3">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter mx-3"></i>
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <p class="none-selected">
+                Copyright &copy; 2024 All Rights Reserved 
+                <br />
+                Created By <a href="#">Mohaned Sameer</a>
+            </p>
+            <p class="none-selected"></p>
+        </div>
+     </div>
+    <!-- End Side Nav -->
+
+    <!-- Start Content -->
+     <div class="content py-5">
+        <div class="container">
+        <div class="search">
+            <input type="text " class="form-control border-2 w-50 bg-transparent rounded-pill text-white mx-auto px-3 shadow-none" id="searchInput" placeholder="search">
+            
+        </div>
+        <div class="row movies g-5 mt-3 text-white" id="movies">
+            
+        </div>
+        </div>
+     </div>
+    <!-- End Content -->
+
+    <!-- Start Form -->
+    <div class="contact py-5">
+        <div class="container">
+            <h2>Contact US</h2>
+            <form>
+                <div class="row g-3 mt-3">
+                    <div class="col-md-6">
+                        <div class="item">
+                            <input  type="text" id="name" class="bg-transparent form-control rounded-0 " require placeholder="Enter Your Name">
+                            <span class="error none-selected animate__animated animate__flipInX">Invalid Name , only Characters allowed</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="item">
+                            <input  type="email" id="email" class="bg-transparent form-control rounded-0" require placeholder="Enter Your Email">
+                            <span class="error none-selected animate__animated animate__flipInX">Invalid Email , try example@domain.com</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="item">
+                            <input  type="number" id="Phone" class="bg-transparent form-control rounded-0" require placeholder="Enter Your Phone">
+                            <span class="error none-selected animate__animated animate__flipInX">"Enter Your Phone"</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="item">
+                            <input  type="text" id="age" class="bg-transparent form-control rounded-0" require placeholder="Enter Your Ege">
+                            <span class="error none-selected animate__animated animate__flipInX">Your age must be over 16+</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="item position-relative">
+                            <input  type="password" id="password" class="bg-transparent form-control rounded-0" require placeholder="Enter Your Password" autocomplete="off">
+                            <span class="error none-selected animate__animated animate__flipInX">password must contain numbers & letters at least 8 character</span>
+                            <i class="fa-solid fa-eye-slash show-password" id="showPassword"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="item">
+                            <input  type="password" id="rePassword" class="bg-transparent form-control rounded-0" require placeholder="ReEnter  Password" autocomplete="off">
+                            <span class="error none-selected animate__animated animate__flipInX">Password not match</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <button class="submit btn btn-dark animate__animated">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Form -->
+    <div id="back-to-top"><a href="#"><i class="fa-solid fa-arrow-up-long"></i></a></div>
+    <div class="loading">
+        <span class="loader"></span>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
